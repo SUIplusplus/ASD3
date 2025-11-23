@@ -25,9 +25,9 @@ void BinTree::inTraverse(std::ostream& out) {
 
 void BinTree::inTraverseRec(Node* curr, std::ostream& out) {
     if (!curr) return;
-    inTraverseRec(curr->left);
+    inTraverseRec(curr->left, out);
     out << curr->val << " ";
-    inTraverseRec(curr->right);
+    inTraverseRec(curr->right, out);
 }
 
 void BinTree::preTraverse(std::ostream& out) {
@@ -49,8 +49,8 @@ void BinTree::postTraverse(std::ostream& out) {
 
 void BinTree::postTraverseRec(Node* curr, std::ostream& out) {
     if (!curr) return;
-    postTraverseRec(curr->left);
-    postTraverseRec(curr->right);
+    postTraverseRec(curr->left, out);
+    postTraverseRec(curr->right, out);
     out << curr->val << " ";
 }
 

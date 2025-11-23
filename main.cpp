@@ -20,7 +20,7 @@ int main() {
         try {
             stringstream ss;
             tree.parseParenthExp(s);
-            cout << "Binary tree (in order traversal): ";
+            cout << "Binary tree (pre-order traversal): ";
             tree.preTraverse();
             tree.preTraverse(ss);
             cout << "\n";
