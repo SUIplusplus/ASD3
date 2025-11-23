@@ -29,33 +29,18 @@ int main() {
             while (ss >> n) { 
                 rbtree.insert(n);
             }
-            int choice;
-            cout << "1. Inorder traversal\n2. Preorder traversal\n3. Postorder traversal\n4. Bredth-firth traversal\nChoose an option: ";
-            cin >> choice;
-            switch (choice) {
-                case 1:
-                    cout << "Red-Black tree: ";
-                    rbtree.inTraverse();
-                    cout << endl;
-                    break;
-                case 2:
-                    cout << "Red-Black tree: ";
-                    rbtree.preTraverse();
-                    cout << endl;
-                    break;
-                case 3:
-                    cout << "Red-Black tree: ";
-                    rbtree.postTraverse();
-                    cout << endl;
-                    break;
-                case 4:
-                    cout << "Red-Black tree: ";
-                    rbtree.bredthTraverse();
-                    cout << endl;
-                    break;
-                default:
-                    cout << "Not an option.\n";
-            }
+            cout << "In-order traversal: ";
+            rbtree.inTraverse();
+            cout << endl;
+            cout << "Pre-order traversal: ";
+            rbtree.preTraverse();
+            cout << endl;
+            cout << "Post-order traversal: ";
+            rbtree.postTraverse();
+            cout << endl;
+            cout << "Bredth-first traversal: ";
+            rbtree.bredthTraverse();
+            cout << endl;
         } catch (const std::runtime_error& e) {
             cout << e.what() << endl;
         }
